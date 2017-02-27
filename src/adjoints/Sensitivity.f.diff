@@ -1,0 +1,11 @@
+435,437c435,436
+< !am           call objectivef_bo(jd, kd, x(ig), y(ig), xv(igv), yv(igv), 
+< !am     +          q(igq), qb1(igq), xx(ig), xy(ig), yx(ig), yy(ig), opt_obj, opt_objb)
+<            call objectivef_ts_ad(jd,kd,q(igq),qb1(igq),opt_obj,opt_objb)
+---
+>            call objectivef_bo(jd, kd, x(ig), y(ig), xv(igv), yv(igv), 
+>      +          q(igq), qb1(igq), xx(ig), xy(ig), yx(ig), yy(ig), opt_obj, opt_objb)
+518d516
+<         if(if_obj .and. if_objtot) then
+520a519
+>         if(if_obj .and. if_objtot) then

@@ -1,0 +1,1 @@
+ -r8 -O0 -zero -check all -traceback -w -warn all #-convert big_endian #careful about big_endian

@@ -1,0 +1,22 @@
+#Tapenade
+TPN             = /home/anandps/local/tapenade3.6/bin/tapenade
+
+RM              = /bin/rm
+
+TPNFLAGS        = -r8 -backward
+
+OBJS            = objectives_bo.f
+
+all:    $(OBJS)
+	@echo "Cleaning Code.."
+	@bash cleanup.bash
+
+clean:
+	${RM} -f *.o *_bo.f *_cb.f *.f~ *.msg
+
+###############################################################################
+## Automatic differentiation using Tapenade 
+###############################################################################
+
+objectives_bo.f:     ../objectives.f ../modules.f
+		     ${TPN} ${TPNFLAGS} -head objectivef -vars "q fmtip fsmach" -outvars "opt_obj fmtip fsmach" -difffuncname "_bo" ../objectives.f ../modules.f

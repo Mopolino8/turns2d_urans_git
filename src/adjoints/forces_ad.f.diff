@@ -1,0 +1,4 @@
+44d43
+<         if(if_obj .and. if_objtot) then
+46a46
+>         if(if_obj .and. if_objtot) then

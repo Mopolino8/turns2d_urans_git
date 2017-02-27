@@ -1,0 +1,17 @@
+443,447c443,445
+< !am           call  objectivef(jd,kd,x(ig),y(ig),xv(igv),yv(igv),q(igq),xx(ig),xy(ig),yx(ig),yy(ig),opt_obj)
+< !am           call objectivef_bo(jd, kd, x(ig), y(ig), xv(igv), yv(igv), 
+< !am     +          q(igq), qb1(igq), xx(ig), xy(ig), yx(ig), yy(ig), opt_obj, opt_objb)
+<            call objectivef_ts(jd,kd,q(igq),opt_obj,im)
+<            call objectivef_ts_ad(jd,kd,q(igq),qb1(igq),opt_obj,opt_objb)
+---
+>            call  objectivef(jd,kd,x(ig),y(ig),xv(igv),yv(igv),q(igq),xx(ig),xy(ig),yx(ig),yy(ig),opt_obj)
+>            call objectivef_bo(jd, kd, x(ig), y(ig), xv(igv), yv(igv), 
+>      +          q(igq), qb1(igq), xx(ig), xy(ig), yx(ig), yy(ig), opt_obj, opt_objb)
+582,584c580,581
+< !am               call objectivef_bo(jd, kd, x(ig), y(ig), xv(igv), yv(igv), 
+< !am     +              q(igq), qb1(igq), xx(ig), xy(ig), yx(ig), yy(ig), opt_obj, opt_objb)
+<                call objectivef_ts_ad(jd,kd,q(igq),qb1(igq),opt_obj,opt_objb)
+---
+>                call objectivef_bo(jd, kd, x(ig), y(ig), xv(igv), yv(igv), 
+>      +              q(igq), qb1(igq), xx(ig), xy(ig), yx(ig), yy(ig), opt_obj, opt_objb)
